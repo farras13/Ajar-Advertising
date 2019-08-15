@@ -23,7 +23,7 @@
 
     <body>
 
-       <?php $this->load->view('template/header'); ?>
+        <div data-include="header"> <?php include 'template/header.php'; ?> </div>
 
         <div class="col-xl-12 p-0 m-0 w-100">
             <div class="row w-100 m-0">
@@ -162,7 +162,7 @@
             </div>
         </div>
 
-       <?php $this->load->view('template/footer'); ?>
+       <div data-include="footer-2"> <?php include 'template/footer.php'; ?> </div>
 
 
         <!-- lib -->

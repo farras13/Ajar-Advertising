@@ -11,7 +11,6 @@ class Home extends CI_Controller {
 
 	public function Payment()
 	{
-		
 		$this->load->view('payment');
 	}
 

@@ -33,6 +33,14 @@
 
     <body>
 
+       <?php if($this->session->flashdata('succes')){ ?>
+            <div class="col-md-12" style="margin-top: -70px; z-index: 10000; padding: 0em 25% 0em 25%;">
+                <div class="alert alert-danger fade in" id="alertAuto" style="border-radius: 30px; font-weight: bold;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <?php echo $this->session->flashdata('succes'); ?>
+                </div>
+            </div>
+        <?php } ?>
 
         <div class="full-height d-flex">
             <div class="split left flex-column blur">
@@ -43,16 +51,17 @@
             </div>
 
             <div id="login" class="split right flex-column">
+                <form  method="POST" action="<?php echo site_url() ?>/Login/Check">
                 <div class="centered w-50">
                     <h3> <b> Hello Ajarian ! </b></h3>
                     <h4>Let’s start make a noise for your brand !</h4>
                     <div class="form-group account mt-5 ">
-                        <input type="text" class="form-control w-100 my-4" id="username" placeholder="User name">
+                        <input type="text" class="form-control w-100 my-4" id="username" name="username" placeholder="User name" required="">
                         <div class="pass_show">
-                            <input type="password" class="form-control w-100 my-4" id="password" placeholder="Password">
+                            <input type="password" class="form-control w-100 my-4" id="password" name="password" placeholder="Password">
                         </div>
                     </div>
-                    <button class="btn-grad-warning w-100 btn-rounded py-2">Sign In</button>
+                    <button type="submit" class="btn-grad-warning w-100 btn-rounded py-2">Sign In</button>
 
                     <p class="text-right my-3 fz-1"> <a href="">Forget my password</a> </p>
                     <p class="text-center fz-1">By pressing sign in button, I agreed to the applied <a href="">term and
@@ -62,22 +71,21 @@
                     <p class="text-center fz-1"> <a id="tosingup" href="#">Sign up</a> here if you are not
                         registered
                         yet.</p>
-                </div>
+                </div> </form>
             </div>
 
             <div id="singup" class="split right flex-column">
                 <div class="centered w-50">
                     <h3> <b> Hello Ajarian ! </b></h3>
                     <h4>Let’s start make a noise for your brand !</h4>
+                    <form  method="POST" action="<?php echo site_url() ?>/Login/regis"  enctype="multipart/form-data">
                     <div class="form-group account mt-4 ">
-                        <input type="text" class="form-control w-100 my-2" id="name" placeholder="Name">
-                        <input type="email" class="form-control w-100 my-2" name="email" id="email" placeholder="Email">
-                        <input type="text" class="form-control w-100 my-2" name="company" id="company"
-                            placeholder="Company Name">
-
-                        <input type="tel" class="form-control w-100 my-2" id="phone" placeholder="Phone">
+                        <input type="text" class="form-control w-100 my-2" id="name" name="name" placeholder="Name" required="">
+                        <input type="email" class="form-control w-100 my-2" name="email" id="email" placeholder="Email" required="">
+                        <input type="text" class="form-control w-100 my-2" name="company" id="company" placeholder="Company Name" required="">
+                        <input type="tel" class="form-control w-100 my-2" id="phone" name="phone" placeholder="Phone" maxlength="12">
                         <div class="pass_show">
-                            <input type="password" class="form-control w-100 my-2" id="newpassword"
+                            <input type="password" class="form-control w-100 my-2" name="newpassword" id="newpassword"
                                 placeholder="Password">
                         </div>
                         <div class="pass_show">
@@ -86,9 +94,9 @@
                         </div>
                         <small id="error-password" class="text-danger m-0">password not match</small>
                     </div>
-                    <button id="btn-signup" class="btn-grad-warning w-100 btn-rounded py-2">Sign Up</button>
+                    <button id="btn-signup" type="submit" class="btn-grad-warning w-100 btn-rounded py-2">Sign Up</button></form>
 
-                    <p class="text-right my-3 fz-1"> <a href="">Forget my password</a> </p>
+                    <p class="text-right my-3 fz-1"> <a href=""  id="fgt">Forget my password</a> </p>
                     <p class="text-center fz-1">By pressing sign in button, I agreed to the applied <a href="">term and
                             condition</a> made by PT
                         AJAR Media
@@ -111,6 +119,10 @@
 
 
         <!-- javascript -->
+        <script type="text/javascript">
+          $("#alertAuto").fadeTo(5000, 500).slideUp(500, function(){
+          $("#alertAuto").slideUp(500);
+        </script>
         <script>
             $(document).ready(function () {
                 $('.pass_show').append('<span class="ptxt fa fa-eye"></span>');
@@ -129,6 +141,7 @@
 
             $('#tosingup').click(function () {
                 $('#login').hide()
+                $('#fgt').hide()
                 $('#singup').slideDown('slow', function () {
                     $(this).show()
                 })
@@ -149,6 +162,7 @@
                 }
             })
         </script>
+
     </body>
 
 </html>
