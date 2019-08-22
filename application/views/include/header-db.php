@@ -6,7 +6,7 @@
                 <!-- <a class="text-info" href=""> <span class="fa fa-angle-left px-2"></span> Back </a> -->
             </div>
             <div class="col-4 text-center">
-                <a href="index.html"><img class="logo-header" src="<?php echo base_url() ?>assets/img/logo-adv.svg" alt="logo"></a>
+                <a href="<?php echo site_url() ?>/Dashboard"><img class="logo-header" src="<?php echo base_url() ?>assets/img/logo-adv.svg" alt="logo"></a>
             </div>
             <div class="col-4 d-flex justify-content-end align-items-center">
 

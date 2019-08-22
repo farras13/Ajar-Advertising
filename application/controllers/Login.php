@@ -65,7 +65,9 @@ class Login extends CI_Controller {
 			$this->session->set_userdata('user_login', $userdata);
 			redirect('Dashboard');
 		}else{
-			echo "masih gagal say";
+			// echo "masih gagal say";
+			$this->session->set_flashdata('gagal', 'prei lur');
+			redirect('Login');
 		}
 	}
 

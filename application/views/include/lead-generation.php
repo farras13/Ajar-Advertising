@@ -20,37 +20,20 @@
             </tr>
         </thead>
         <tbody>
+            <?php foreach ($post as $lg) { ?>
+            
             <tr>
                 <!-- <th scope="row">1</th> -->
                 <td scope="row" class="pl-4">
-                    <a href="">Fundamental Social Media Marketing</a>
+                    <a href=""><?php echo $lg->title; ?></a>
                 </td>
                 <td class="text-center">eBook</td>
                 <td class="text-center">10</td>
                 <td class="text-center">0.01</td>
-                <td class="text-center">1 Jan 2019</td>
+                <td class="text-center"><?php echo date('d F Y', strtotime($lg->created_at));  ?></td>
                 <td><a href="">Download</a></td>
             </tr>
-            <tr>
-                <td scope="row" class="pl-4">
-                    <a href="">7 Tips to boost direct booking</a>
-                </td>
-                <td class="text-center">Videos</td>
-                <td class="text-center">13</td>
-                <td class="text-center">0.01</td>
-                <td class="text-center">1 Jan 2019</td>
-                <td><a href="">Download</a></td>
-            </tr>
-            <tr>
-                <td scope="row" class="pl-4">
-                    <a href="">5 Free Tools to manage your digital marketing</a>
-                </td>
-                <td class="text-center">eBook</td>
-                <td class="text-center">29</td>
-                <td class="text-center">0.02</td>
-                <td class="text-center">1 Jan 2019</td>
-                <td><a href="">Download</a></td>
-            </tr>
+            <?php } ?>
         </tbody>
     </table>
     <div class="w-100 text-center py-5">

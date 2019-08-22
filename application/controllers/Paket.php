@@ -5,7 +5,8 @@ class Paket extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('paket');
+		$data['main_view'] = 'paket';
+		$this->load->view('template_user',$data);
 	}
 }
 

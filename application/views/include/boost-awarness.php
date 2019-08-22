@@ -20,37 +20,22 @@
             </tr>
         </thead>
         <tbody>
+            <?php foreach ($post as $ba) { ?>
+                
+            
             <tr>
                 <!-- <th scope="row">1</th> -->
                 <td scope="row" class="pl-4">
-                    <a href="">Fundamental Social Media Marketing</a>
+                    <a href=""><?php echo $ba->title ?></a>
                 </td>
                 <td class="text-center">1000</td>
                 <td class="text-center">10</td>
                 <td class="text-center">0.01</td>
-                <td class="text-right">1 Jan 2019</td>
+                <td class="text-right"><?php echo date('d F Y', strtotime($ba->created_at));  ?></td>
                 <td><a href="">Find Schedule</a></td>
             </tr>
-            <tr>
-                <td scope="row" class="pl-4">
-                    <a href="">7 Tips to boost direct booking</a>
-                </td>
-                <td class="text-center">2000</td>
-                <td class="text-center">13</td>
-                <td class="text-center">0.01</td>
-                <td class="text-right">1 Jan 2019</td>
-                <td><a href="">Find Schedule</a></td>
-            </tr>
-            <tr>
-                <td scope="row" class="pl-4">
-                    <a href="">5 Free Tools to manage your digital marketing</a>
-                </td>
-                <td class="text-center">3000</td>
-                <td class="text-center">29</td>
-                <td class="text-center">0.02</td>
-                <td class="text-right">1 Jan 2019</td>
-                <td><a href="">Find Schedule</a></td>
-            </tr>
+
+            <?php } ?>
         </tbody>
     </table>
     <div class="w-100 text-center py-5">

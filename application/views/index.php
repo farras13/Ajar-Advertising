@@ -1,3 +1,6 @@
+
+<div data-include="header"> <?php include 'include/header.php'; ?> </div>
+
  <!-- section 1 -->
         <div id="section-1" class="bg-landing w-100 page-section text-center py-5">
             <div style="padding: 10% 0;" class="container my-auto">
@@ -192,3 +195,5 @@
                 </a>
             </div>
         </div>
+
+        <div data-include="footer-2"> <?php include 'include/footer-2.php'; ?> </div>
