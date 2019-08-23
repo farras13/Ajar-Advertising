@@ -13,14 +13,14 @@
             crossorigin="anonymous" />
 
         <!-- bootstrap -->
-        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap/bootstrap.min.css">
 
         <!-- local css -->
-        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
-        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.dataTables.min.css">
 
         <!-- chart -->
-        <script src="<?php echo base_url() ?>assets/js/chart.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/chart.js"></script>
     </head>
 
     <body>
@@ -29,6 +29,7 @@
 
         <div class="bg-light py-5">
             <div class="container">
+                <?php $this->load->view('ajar_article/_messages'); ?>
                 <div class="d-flex w-auto ">
                     <ul class="nav shadow bg-white rounded" role="tablist">
                         <li class="nav-item tab   active-tab border-right ">
@@ -46,6 +47,10 @@
                         <li class="nav-item tab   border-left ">
                             <a href="#step-4" id="step4-tab" class="nav-link " aria-selected="false" data-toggle="tab"
                                 role="tab">Billing</a>
+                        </li>
+                        <li class="nav-item tab   border-left ">
+                            <a href="#step-5" id="step4-tab" class="nav-link " aria-selected="false" data-toggle="tab"
+                                role="tab">post</a>
                         </li>
                     </ul>
                 </div>
@@ -70,6 +75,13 @@
                 <div class="tab-pane fade " id="step-4" aria-labelledby="step4-tab" role="tabpanel">
                     
                 </div>
+
+                <!-- section setting -->
+                <div class="tab-pane fade" id="step-5" aria-labelledby="step5-tab" role="tabpanel">
+                    <form method="POST" action="<?php echo site_url() ?>/Dashboard/add_post">
+                    <div data-include="postingan"><?php include 'include/post.php' ?></div>
+                    </form>
+                </div>
             </div>
 
         </div>
@@ -78,10 +90,12 @@
 
 
         <!-- lib -->
-        <script src="<?php echo base_url() ?>assets/js/jquery-3.4.1.min.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/popper.min.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/jquery.dataTables.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery-3.4.1.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/popper.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
+        <!-- Ckeditor js -->
+        <script src="<?php echo base_url(); ?>assets/js/ckeditor/ckeditor.js"></script>
         <!-- lib -->
 
 
@@ -362,7 +376,101 @@
         }
     })
 </script>
+<!-- Ckeditor -->
+<script>
+    var ckEditor = document.getElementById('ckEditor');
 
+    if (ckEditor != undefined && ckEditor != null) {
+        CKEDITOR.replace('ckEditor', {
+            language: 'en',
+            filebrowserBrowseUrl: 'path',
+            removeButtons: 'Save',
+        });
+    }
+
+    CKEDITOR.on('dialogDefinition', function (ev) {
+            var editor = ev.editor;
+            var dialogDefinition = ev.data.definition;
+
+            // This function will be called when the user will pick a file in file manager
+            var cleanUpFuncRef = CKEDITOR.tools.addFunction(function (a) {
+                $('#ck_file_manager').modal('hide');
+                CKEDITOR.tools.callFunction(1, a, "");
+            });
+            var tabCount = dialogDefinition.contents.length;
+            for (var i = 0; i < tabCount; i++) {
+                var browseButton = dialogDefinition.contents[i].get('browse');
+                if (browseButton !== null) {
+                    browseButton.onClick = function (dialog, i) {
+                        editor._.filebrowserSe = this;
+                        var iframe = $('#ck_file_manager').find('iframe').attr({
+                            src: editor.config.filebrowserBrowseUrl + '&CKEditor=body&CKEditorFuncNum=' + cleanUpFuncRef + '&langCode=en'
+                        });
+                        $('#ck_file_manager').appendTo('body').modal('show');
+                    }
+                }
+            }
+
+        }
+    );
+</script>
+<script type="text/javascript">
+    $(function() {              
+        // Bootstrap DateTimePicker v4
+        $('#date_event').datetimepicker({
+            format: 'YYYY-MM-DD'
+        });
+  
+    }); 
+</script>
+<script type="text/javascript">
+    
+$('#lang').change(function(){
+    $.ajax({
+      url: "<?php echo site_url() ?>/Dashboard/getCategory",
+      data: { "lang": $("#lang").val() },
+      dataType:"json",
+      type: "POST",
+        success: function(data){
+            console.log(data);
+            var html2 = '';
+
+            if (data.length == 0) {
+                html2 += '<option value="">Select a category</option>';
+            } else {
+                html2 += '<option value="">Select a category</option>';
+                for (i = 0; i < data.length; i++) {
+                    html2 += '<option value="'+ data[i].id +'">'+ data[i].name +' </option>';
+                }
+            }
+            $('#category').html(html2);
+        }
+    });
+})
+
+$('#category').change(function(){
+    $.ajax({
+      url: "<?php echo site_url() ?>/Dashboard/getSubCategory",
+      data: { "category": $("#category").val() },
+      dataType:"json",
+      type: "POST",
+        success: function(data){
+            console.log(data);
+            var html2 = '';
+
+            if (data.length == 0) {
+                html2 += '<option value="">Select a Subcategory</option>';
+            } else {
+                html2 += '<option value="">Select a Subcategory</option>';
+                for (i = 0; i < data.length; i++) {
+                    html2 += '<option value="'+ data[i].parent_id +'">'+ data[i].name +' </option>';
+                }
+            }
+            $('#subcategory').html(html2);
+        }
+    });
+})
+</script>
 
     </body>
 
