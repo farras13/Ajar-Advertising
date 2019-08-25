@@ -61,11 +61,13 @@ class Login extends CI_Controller {
 		$check 		= $this->login_model->login($email, $password);
 
 		if ($check->row() != null) {
-			$userdata = array('username' => $check->row()->email);
+			$userdata = array('username' => $check->row()->email, 'id' => $check->row()->id_user, 'level_system' => $check->row()->user_level) ;
 			$this->session->set_userdata('user_login', $userdata);
 			redirect('Dashboard');
 		}else{
-			echo "masih gagal say";
+			// echo "masih gagal say";
+			$this->session->set_flashdata('gagal', 'prei lur');
+			redirect('Login');
 		}
 	}
 

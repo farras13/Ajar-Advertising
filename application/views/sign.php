@@ -32,16 +32,6 @@
     </head>
 
     <body>
-
-       <?php if($this->session->flashdata('succes')){ ?>
-            <div class="col-md-12" style="margin-top: -70px; z-index: 10000; padding: 0em 25% 0em 25%;">
-                <div class="alert alert-danger fade in" id="alertAuto" style="border-radius: 30px; font-weight: bold;">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <?php echo $this->session->flashdata('succes'); ?>
-                </div>
-            </div>
-        <?php } ?>
-
         <div class="full-height d-flex">
             <div class="split left flex-column blur">
                 <div class="centered w-50 px-5 text-left">
@@ -58,7 +48,7 @@
                     <div class="form-group account mt-5 ">
                         <input type="text" class="form-control w-100 my-4" id="username" name="username" placeholder="User name" required="">
                         <div class="pass_show">
-                            <input type="password" class="form-control w-100 my-4" id="password" name="password" placeholder="Password">
+                            <input type="password" class="form-control w-100 my-4" id="password" name="password" placeholder="Password" required="">
                         </div>
                     </div>
                     <button type="submit" class="btn-grad-warning w-100 btn-rounded py-2">Sign In</button>
@@ -95,6 +85,9 @@
                         <small id="error-password" class="text-danger m-0">password not match</small>
                     </div>
                     <button id="btn-signup" type="submit" class="btn-grad-warning w-100 btn-rounded py-2">Sign Up</button></form>
+                    <?php if (validation_errors()) {
+                        echo validation_errors();
+                    } ?>
 
                     <p class="text-right my-3 fz-1"> <a href=""  id="fgt">Forget my password</a> </p>
                     <p class="text-center fz-1">By pressing sign in button, I agreed to the applied <a href="">term and
@@ -119,10 +112,6 @@
 
 
         <!-- javascript -->
-        <script type="text/javascript">
-          $("#alertAuto").fadeTo(5000, 500).slideUp(500, function(){
-          $("#alertAuto").slideUp(500);
-        </script>
         <script>
             $(document).ready(function () {
                 $('.pass_show').append('<span class="ptxt fa fa-eye"></span>');

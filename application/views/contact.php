@@ -1,3 +1,5 @@
+    
+    <div data-include="header"> <?php include 'include/header.php'; ?> </div>
 
         <div style="background-image:url('https://evoluer.in/wp-content/themes/assets/images/header-bg.jpg'); padding: 9% 7%;"
             class="w-100 bg-dark text-white">
@@ -49,3 +51,5 @@
                 width="100%" height="400" frameborder="0" style="border:0" allowfullscreen>
             </iframe>
         </div>
+
+        <div data-include="footer-2"> <?php include 'include/footer-2.php'; ?> </div>

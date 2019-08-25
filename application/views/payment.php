@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Ajar Advertising</title>
-
-        <!-- use fontawesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-            crossorigin="anonymous" />
-
-         <!-- bootstrap -->
-        <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/bootstrap/bootstrap.min.css">
-
-        <!-- local css -->
-        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
-       
-
-    </head>
-
-    <body>
-
-        <div data-include="header"> <?php include 'template/header.php'; ?> </div>
+        <div data-include="header"> <?php include 'include/header.php'; ?> </div>
 
         <div class="col-xl-12 p-0 m-0 w-100">
             <div class="row w-100 m-0">
@@ -162,20 +138,4 @@
             </div>
         </div>
 
-       <div data-include="footer-2"> <?php include 'template/footer.php'; ?> </div>
-
-
-        <!-- lib -->
-        <script src="<?php echo base_url() ?>assets/js/jquery-3.4.1.min.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/popper.min.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
-        <!-- lib -->
-
-
-        <!-- javascript -->
-
-
-    </body>
-
-
-</html>
+       <div data-include="footer-2"> <?php include 'include/footer.php'; ?> </div>

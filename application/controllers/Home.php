@@ -11,17 +11,20 @@ class Home extends CI_Controller {
 
 	public function Payment()
 	{
-		$this->load->view('payment');
+		$data['main_view'] = 'payment';
+		$this->load->view('template_user',$data);
 	}
 
 	public function Faq()
 	{
-		$this->load->view('faq');
+		$data['main_view'] = 'faq';
+		$this->load->view('template_user',$data);
 	}
 
 	public function Privacy()
 	{
-		$this->load->view('privacy');
+		$data['main_view'] = 'privacy';
+		$this->load->view('template_user',$data);
 	}
 
 }

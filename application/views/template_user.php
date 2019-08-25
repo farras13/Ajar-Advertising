@@ -32,12 +32,10 @@
 
     <body>
 
-        <div data-include="header"> <?php include 'template/header.php'; ?> </div>
+        <!-- content -->
 
         <?php $this->load->view($main_view); ?>
 
-        <div data-include="footer-2"> <?php include 'template/footer-2,php'; ?>
-        </div>
 
         <!-- lib -->
         <script src="<?php echo base_url() ?>assets/js/jquery-3.4.1.min.js"></script>
@@ -113,6 +111,18 @@
             $(".popup > iframe").on("click", function (e) {
                 e.stopPropagation();
             });
+        </script>
+        <script>
+            let cardheader = document.querySelectorAll(".card-header");
+            let collapse = document.querySelectorAll(".ac")
+            let angle = document.querySelectorAll(".float-right")
+            for (let i = 0; i < cardheader.length; i++) {
+                $(cardheader[i]).click(function () {
+                    $(collapse[i]).toggle("slow")
+                    $(angle[i]).toggleClass("fa-angle-up")
+
+                })
+            }
         </script>
     </body>
 

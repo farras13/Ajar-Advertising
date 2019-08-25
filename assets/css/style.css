@@ -329,7 +329,7 @@ p a {
 .blur::after {
     content: '';
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://2.bp.blogspot.com/-J9u_aarhuL4/Wm7sOdUOW3I/AAAAAAAADCE/AmgNn2cxTDwVXbQh5BIeVB0zOyx48PGQgCLcBGAs/s1600/digital-agency.jpg);
-    background-image: url('../img/bg2.jpg'); 
+    /*background-image: url('../img/bg2.jpg');*/ 
     position: absolute;
     top: 0px;
     left: 0px;
