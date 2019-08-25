@@ -13,19 +13,19 @@
             crossorigin="anonymous" />
 
         <!-- bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap/bootstrap.min.css">
 
         <!-- local css -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jquery.dataTables.min.css">
 
         <!-- chart -->
-        <script src="js/chart.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/chart.js"></script>
     </head>
 
     <body>
 
-        <div data-include="header-db"></div>
+        <div data-include="header-db"> <?php include'template/header-db.php'; ?></div>
 
         <div class="bg-light py-5">
             <div class="container">
@@ -53,36 +53,35 @@
 
             <div class="container mt-5 tab-content">
                 <div class="tab-pane fade show active " id="step-1" aria-labelledby="step1-tab" role="tabpanel">
-                    <div data-include="dashboard"></div>
+                    <div data-include="dashboard"><?php include 'template/dashboard.php' ?></div>
                 </div>
 
                 <!-- section following -->
                 <div class="tab-pane fade " id="step-2" aria-labelledby="step2-tab" role="tabpanel">
-                    <div data-include="boost-awarness"></div>
+                    <div data-include="boost-awarness"><?php include 'template/boost-awarness.php' ?></div>
                 </div>
 
                 <!-- section setting -->
                 <div class="tab-pane fade" id="step-3" aria-labelledby="step3-tab" role="tabpanel">
-                    <div data-include="lead-generation"></div>
+                    <div data-include="lead-generation"><?php include 'template/lead-generation.php' ?></div>
                 </div>
 
                 <!-- section download -->
                 <div class="tab-pane fade " id="step-4" aria-labelledby="step4-tab" role="tabpanel">
-
+                    
                 </div>
             </div>
 
         </div>
 
-        <div data-include="footer-2"></div>
+        <div data-include="footer-2"> <?php include'template/footer-2.php'; ?></div>
 
 
         <!-- lib -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.dataTables.min.js"></script>
-        <script src="loader.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/jquery-3.4.1.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/popper.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url() ?>assets/js/jquery.dataTables.min.js"></script>
         <!-- lib -->
 
 

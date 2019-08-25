@@ -32,14 +32,11 @@
 
     <body>
 
-        <div data-include="header">
-             <?php $this->load->view('template/header'); ?>
-        </div>
+        <div data-include="header"> <?php include 'template/header.php'; ?> </div>
 
         <?php $this->load->view($main_view); ?>
 
-        <div data-include="footer-2">  
-            <?php $this->load->view('template/footer-2'); ?>
+        <div data-include="footer-2"> <?php include 'template/footer-2,php'; ?>
         </div>
 
         <!-- lib -->

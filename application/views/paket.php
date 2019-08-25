@@ -22,7 +22,7 @@
 
     <body>
 
-        <div data-include="header"> <?php $this->load->view('template/header'); ?> </div>
+        <div data-include="header"> <?php include 'template/header.php'; ?> </div>
 
         <div style="background-image:url('https://evoluer.in/wp-content/themes/assets/images/header-bg.jpg'); padding:11% 7%;"
             class="w-100  bg-dark text-white">
@@ -100,7 +100,7 @@
 
 
 
-        <div data-include="footer-2"> <?php $this->load->view('template/footer'); ?> </div>
+        <div data-include="footer-2"> <?php include 'template/footer.php'; ?> </div>
 
 
         <!-- lib -->
