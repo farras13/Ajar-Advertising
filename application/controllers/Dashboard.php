@@ -72,7 +72,7 @@ class Dashboard extends CI_Controller {
 		$ins = $this->admin_model->ins_post($level ,$user, $title, $ctn, $slug, $summary, $key, $lang, $cat, $subcat);
 
 		if ($ins >= 1 ) {
-			$this->session->set_flashdata('success', "Post berhasil di tambahkan";
+			$this->session->set_flashdata('success', "Post berhasil di tambahkan");
 			redirect('Dashboard');
 		}
 
