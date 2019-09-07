@@ -22,6 +22,7 @@
 						<input type="password" class="form-control my-3" name="password" id="password"
 							aria-describedby="helpId" placeholder="new password">
 
+						<button class="mt-4 px-5 btn btn-rounded btn-info">Save Changes</button>
 					</div>
 				</div>
 			</div>
