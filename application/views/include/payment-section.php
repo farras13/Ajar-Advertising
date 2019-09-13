@@ -27,46 +27,35 @@
 
 	</div>
 	<div class="col-md-5 payment-radio">
-		<p>Select Your Payment :</p>
-		<p>
-			<span class="input-group-addon">
-				<input name="payment" type="radio">
-				<img class="radio-img"
-					src="https://res.cloudinary.com/dkswpljtg/image/upload/v1531301303/Mastercard-Visa-Limited-Acceptance-Programs_uvpqvf.png">
-			</span>
-		</p>
-		<p>
-			<span class="input-group-addon">
-				<input name="payment" type="radio">
-				<img class="radio-img" src="http://mnctrijaya.com/uploads/news/bank_mandiri.jpg">
-			</span>
-		</p>
-		<p>
-			<span class="input-group-addon">
-				<input name="payment" type="radio">
-				<img class="radio-img" src="http://chandra.my.id/wp-content/uploads/2012/07/logo-bank-bca.jpg">
-			</span>
-		</p>
-		<p>
-			<span class="input-group-addon">
-				<input name="payment" type="radio">
-				<img class="radio-img"
-					src="https://4.bp.blogspot.com/-WPYTKgFutro/WEPx1YEAvXI/AAAAAAAABqg/_X_qPtfzTJYCaBSbzDFGK1z7TpkGAx5LQCLcB/s1600/Cara%2BDaftar%2BE%2BPay%2BBRI%2Bdan%2BKeunggulannya%252Clogin%2Bepay%2Bbri%252Cepay%2Bbri%2Btokopedia%252Ct%2Bbank%2Bbri%252Cepay%2Bmandiri%252Cbiaya%2Be-pay%2Bbri%252Ce%2Bkatalog%2Bbri%252Cmocash%2Bbri%252Ce%2Bcatalog%2Bbri%252C.jpg">
-			</span>
-		</p>
-		<p>
-			<span class="input-group-addon">
-				<input name="payment" type="radio">
-				<img class="radio-img"
-					src="http://3.bp.blogspot.com/-DqRReIuCgcc/UjnSRcKPIgI/AAAAAAAAAJI/66Bwh6-3IIo/s1600/CimbClicks.png">
-			</span>
-		</p>
-		<p>
-			<span class="input-group-addon">
-				<input name="payment" type="radio">
-				<img class="radio-img"
-					src="https://res.cloudinary.com/dkswpljtg/image/upload/v1531301303/Mastercard-Visa-Limited-Acceptance-Programs_uvpqvf.png">
-			</span>
-		</p>
+		<div class="bg-gray p-4">
+			<p class="font-weight-bold text-center">Customer Detail</p>
+			<table class="payment-table">
+				<tbody>
+					<tr>
+						<td>
+							<p>Name</p>
+							<p>Email</p>
+							<p>Telp</p>
+							<p>Address</p>
+							<p>City</p>
+						</td>
+						<td class="pl-5 payment-value font-weight-bold">
+							<p>: Farid Angga Pribadi </p>
+							<p>: farid.angga@gmail.com</p>
+							<p>: 0851230094221 </p>
+							<p>: Jalan Kapi Sraba No 22</p>
+							<p>: Kota Malang</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
+</div>
+<hr>
+
+<div class="col-md-12 w-100 text-right mt-4">
+	<button class=" btn btn-abbys px-5 py-2 font-weight-bold">
+		CHECKOUT
+	</button>
 </div>
