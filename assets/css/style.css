@@ -464,8 +464,9 @@ button.active-tab:hover {
 	width: 100%;
 }
 
-#table-payment.table.table-bordered td .row {
-	background-color: #cecece;
+#payment-table .col-sm-6:hover {
+	background-color: #e8f0fe;
+	cursor: pointer;
 }
 
 /* responsive */
