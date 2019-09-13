@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div class="col-md-8 pt-5 bg-white">
-		<?php include 'include/payment-promo.php'; ?>
+		<?php include 'include/payment_method/alfamart.php'; ?>
 		</div>
 	</div>
 </div>
