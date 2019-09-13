@@ -50,87 +50,15 @@
 				</div>
 
 				<hr />
+				
+				<?php include 'include/payment-section.php';?>
 
-				<table id="table-payment" class="table table-bordered">
-					<tr>
-						<td class="w-50">
-							<div class="row">
-								<div class="col-lg-2 py-2 my-auto text-center">
-									<img
-										height="30"
-										width="50"
-										src="https://image.flaticon.com/icons/svg/1899/1899722.svg"
-										alt="atm"
-									/>
-								</div>
-								<div class="col-lg-10 py-2">
-									<b>ATM/Bank Transfer</b>
-									<br />
-									<small>Pay from ATM Bersama, Prima or Alto</small>
-								</div>
-							</div>
-						</td>
-						<td class="w-50">
-							<div class="row">
-								<div class="col-lg-2 py-2 my-auto text-center">
-									<img
-										height="20"
-										width="50"
-										src="https://refrez.com/wp-content/uploads/bfi_thumb/logo-gopay-3283zttrcmrz21y5wyx9k1eevtsrj3azdndzvd61i1194tdl6.jpg"
-										alt="atm"
-									/>
-								</div>
-								<div class="col-lg-10 py-2">
-									<b>GO-PAY</b>
-									<br />
-									<small>Pay with your GO-PAY wallet</small>
-								</div>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="w-50">
-							<div class="row">
-								<div class="col-lg-2 py-2 my-auto text-center">
-									<img
-										height="30"
-										width="50"
-										src="https://image.flaticon.com/icons/svg/1899/1899722.svg"
-										alt="atm"
-									/>
-								</div>
-								<div class="col-lg-10 py-2">
-									<b>ATM/Bank Transfer</b>
-									<br />
-									<small>Pay from ATM Bersama, Prima or Alto</small>
-								</div>
-							</div>
-						</td>
-						<td class="w-50">
-							<div class="row">
-								<div class="col-lg-2 py-2 my-auto text-center">
-									<img
-										height="50"
-										width="50"
-										src="https://2.bp.blogspot.com/-BRpU7CBDb6M/WIBAH-0xwAI/AAAAAAAAAyc/iFEOsdwyb286fmcHjskcV2eptJ8W1YxPACLcB/s1600/Internet%2BBanking%2BBCA%2Bklikbca.png"
-										alt="atm"
-									/>
-								</div>
-								<div class="col-lg-10 py-2">
-									<b>GO-PAY</b>
-									<br />
-									<small>Pay with your GO-PAY wallet</small>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</table>
-
-				<div class="col-md-12 w-100 text-right mt-4">
+				<!-- <div class="col-md-12 w-100 text-right mt-4">
 					<button class=" btn btn-abbys px-5 py-2 font-weight-bold">
 						PAY NOW
 					</button>
-				</div>
+				</div> -->
+				<hr>
 				<div class="col-md-12 mt-3">
 					<p>
 						(*) Lorem Ipsum is simply dummy text of the printing and typesetting
