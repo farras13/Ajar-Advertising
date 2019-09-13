@@ -43,29 +43,7 @@
 			</div>
 		</div>
 		<div class="col-md-8 pt-5 bg-white">
-			<div class="container px-5">
-				<div class="text-center">
-					<h3>LET’S FINISH POWERING YOU UP !</h3>
-					<p>This Package is Right for You</p>
-				</div>
-
-				<hr />
-				
-				<?php include 'include/payment-section.php';?>
-
-				<!-- <div class="col-md-12 w-100 text-right mt-4">
-					<button class=" btn btn-abbys px-5 py-2 font-weight-bold">
-						PAY NOW
-					</button>
-				</div> -->
-				<div class="col-md-12 mt-3">
-					<p>
-						(*) Lorem Ipsum is simply dummy text of the printing and typesetting
-						industry. Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry.
-					</p>
-				</div>
-			</div>
+		<?php include 'include/payment-promo.php'; ?>
 		</div>
 	</div>
 </div>
