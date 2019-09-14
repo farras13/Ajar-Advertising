@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div class="col-md-8 pt-5 bg-white">
-		<?php include 'include/payment_method/klikpay.php'; ?>
+		<?php include 'include/payment_method/credit-card.php'; ?>
 		</div>
 	</div>
 </div>
