@@ -27,6 +27,12 @@ class Home extends CI_Controller {
 		$this->load->view('template_user',$data);
 	}
 
+	public function Profile()
+	{
+		$data['main_view'] = 'profile';
+		$this->load->view('template_user',$data);
+	}
+
 }
 
 /* End of file home.php */
