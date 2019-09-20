@@ -51,8 +51,26 @@
 			</div>
 
 			<!-- cc method -->
-			<div id="cc-method">
+			<div class="payment-methods" id="cc-method">
 				<?php include 'include/payment_method/credit-card.php'; ?>
+			</div>
+			<div class="payment-methods" id="gopay-method">
+				<?php include 'include/payment_method/gopay.php'; ?>
+			</div>
+			<div class="payment-methods" id="atm-method">
+				<?php include 'include/payment_method/banking.php'; ?>
+			</div>
+			<div class="payment-methods" id="klikpay-method">
+				<?php include 'include/payment_method/klikpay.php'; ?>
+			</div>
+			<div class="payment-methods" id="alfamart-method">
+				<?php include 'include/payment_method/alfamart.php'; ?>
+			</div>
+			<!-- <div class="payment-methods" id="klikpay-method">
+				<?php include 'include/payment_method/klikpay.php'; ?>
+			</div> -->
+			<div class="payment-methods" id="atm-instruction-method">
+				<?php include 'include/payment_method/banking-instruction.php'; ?>
 			</div>
 		</div>
 	</div>
@@ -61,13 +79,42 @@
 <div data-include="footer-2"><?php include 'include/footer.php'; ?></div>
 
 <script>
-	let methods = document.getElementById('methods');
+	$(document).ready(function () {
+		$(".payment-methods").hide();
+	});
 
+	let methods = document.getElementById('methods');
 	let cc_methods = document.getElementById('cc-methods-payment');
 	// methods
 	$(cc_methods).click(function () {
 		$(methods).hide();
 		$('#cc-method').show();
+	});
+
+	$("#gopay-methods-payment").click(function () {
+		$(methods).hide();
+		$('#gopay-method').show();
+	});
+
+	$("#atm-methods-payment").click(function () {
+		$(methods).hide();
+		$('#atm-method').show();
+	});
+
+	$("#klikpay-methods-payment").click(function () {
+		$(methods).hide();
+		$('#klikpay-method').show();
+	});
+
+	$("#alfamart-methods-payment").click(function () {
+		$(methods).hide();
+		$('#alfamart-method').show();
+	});
+
+	$("#bank-bca").click(function () {
+		$(methods).hide();
+		$('#atm-method').hide();
+		$('#atm-instruction-method').show();
 	});
 
 </script>
