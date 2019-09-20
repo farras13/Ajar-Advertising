@@ -1,3 +1,4 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <div data-include="header"><?php include 'include/header.php'; ?></div>
 
 <div class="col-xl-12 p-0 m-0 w-100">
@@ -43,9 +44,30 @@
 			</div>
 		</div>
 		<div class="col-md-8 pt-5 bg-white">
-		<?php include 'include/payment_method/gopay.php'; ?>
+
+			<!-- methods index -->
+			<div id="methods">
+				<?php include 'include/payment-method.php'; ?>
+			</div>
+
+			<!-- cc method -->
+			<div id="cc-method">
+				<?php include 'include/payment_method/credit-card.php'; ?>
+			</div>
 		</div>
 	</div>
 </div>
 
 <div data-include="footer-2"><?php include 'include/footer.php'; ?></div>
+
+<script>
+	let methods = document.getElementById('methods');
+
+	let cc_methods = document.getElementById('cc-methods-payment');
+	// methods
+	$(cc_methods).click(function () {
+		$(methods).hide();
+		$('#cc-method').show();
+	});
+
+</script>

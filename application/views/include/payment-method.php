@@ -8,7 +8,7 @@
 
 
 	<div id="payment-table" class="row">
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="cc-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
