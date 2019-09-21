@@ -60,6 +60,7 @@ class Dashboard extends CI_Controller {
 		$title 		= $this->input->post('title');
 		$ctn 		= $this->input->post('content');
 		$slug 		= $this->input->post('title_slug');
+		$slug = str_replace(" ", "-", $slug);
 		if ($slug == null) {
 			$slug = $title;
 		}
