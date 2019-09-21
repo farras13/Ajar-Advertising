@@ -69,9 +69,19 @@
 			<!-- <div class="payment-methods" id="klikpay-method">
 				<?php include 'include/payment_method/klikpay.php'; ?>
 			</div> -->
+
+
+			<!-- extend option -->
 			<div class="payment-methods" id="atm-instruction-method">
 				<?php include 'include/payment_method/banking-instruction.php'; ?>
 			</div>
+
+			<div class="payment-methods" id="gopay-qr-method">
+				<?php include 'include/payment_method/gopay-qr.php'; ?>
+			</div>
+
+
+
 		</div>
 	</div>
 </div>
@@ -115,6 +125,12 @@
 		$(methods).hide();
 		$('#atm-method').hide();
 		$('#atm-instruction-method').show();
+	});
+
+	$("#pay-gopay").click(function () {
+		$(methods).hide();
+		$('#gopay-method').hide();
+		$('#gopay-qr-method').show();
 	});
 
 </script>

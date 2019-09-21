@@ -42,5 +42,10 @@
 			</li>
 		</div>
 		<hr />
+		<div class="col-md-12 w-100 text-right mt-4">
+		<button class=" btn btn-abbys px-5 py-2 font-weight-bold" id="pay-gopay">
+			Pay Now with GO-PAY
+		</button>
+	</div>
 	</div>
 </div>
