@@ -9,7 +9,7 @@ class Login extends CI_Controller {
 
 		$this->load->library('session');
 
-		// $this->load->model('login_model');
+		$this->load->model('login_model');
 	}
 	public function index()
 	{

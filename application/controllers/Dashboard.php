@@ -9,7 +9,7 @@ class Dashboard extends CI_Controller {
 		//Do your magic here
 		$userdata = $this->session->userdata('user_login');
 		
-		if ($userdata['level_system'] != 1 ) {
+		if ($userdata['level_system'] == 0 ) {
 			redirect('Login','refresh');
 		}
 		
@@ -60,10 +60,10 @@ class Dashboard extends CI_Controller {
 		$title 		= $this->input->post('title');
 		$ctn 		= $this->input->post('content');
 		$slug 		= $this->input->post('title_slug');
-		$slug = str_replace(" ", "-", $slug);
 		if ($slug == null) {
 			$slug = $title;
 		}
+		$slug = str_replace(" ", "-", $slug);
 		$summary	= $this->input->post('summary');
 		$key 		= $this->input->post('keywords');
 		$lang 		= $this->input->post('lang');
