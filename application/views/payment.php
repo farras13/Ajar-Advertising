@@ -45,6 +45,10 @@
 		</div>
 		<div class="col-md-8 pt-5 bg-white">
 
+			<div id="payment-section">
+				<?php include 'include/payment-section.php'; ?>
+			</div>
+
 			<!-- methods index -->
 			<div id="methods">
 				<?php include 'include/payment-method.php'; ?>
@@ -90,16 +94,23 @@
 	</div>
 </div>
 
-<div data-include="footer-2"><?php include 'include/footer.php'; ?></div>
+<div data-include="footer-2"><?php include 'include/footer-2.php'; ?></div>
 
 <script>
 	$(document).ready(function () {
+		$("#methods").hide();
 		$(".payment-methods").hide();
 	});
 
 	let methods = document.getElementById('methods');
 	let cc_methods = document.getElementById('cc-methods-payment');
 	// methods
+
+	$('#checkout').click(function () {
+		$("#payment-section").hide();
+		$(methods).show();
+	});
+
 	$(cc_methods).click(function () {
 		$(methods).hide();
 		$('#cc-method').show();
