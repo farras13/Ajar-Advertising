@@ -66,9 +66,9 @@
 			<div class="payment-methods" id="alfamart-method">
 				<?php include 'include/payment_method/alfamart.php'; ?>
 			</div>
-			<!-- <div class="payment-methods" id="klikpay-method">
-				<?php include 'include/payment_method/klikpay.php'; ?>
-			</div> -->
+			<div class="payment-methods" id="indomart-method">
+				<?php include 'include/payment_method/indomart.php'; ?>
+			</div>
 
 
 			<!-- extend option -->
@@ -119,6 +119,11 @@
 	$("#alfamart-methods-payment").click(function () {
 		$(methods).hide();
 		$('#alfamart-method').show();
+	});
+
+	$("#indomart-methods-payment").click(function () {
+		$(methods).hide();
+		$('#indomart-method').show();
 	});
 
 	$("#bank-bca").click(function () {

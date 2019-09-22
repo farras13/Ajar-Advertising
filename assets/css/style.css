@@ -32,6 +32,12 @@ a {
 	background-color: #125d8f;
 }
 
+.btn-abbys:hover {
+	color: white;
+	background-color: #0070bb;
+
+}
+
 h1.font-weight-bolder {
 	font-size: 3.5em;
 }
