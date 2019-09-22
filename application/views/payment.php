@@ -80,6 +80,10 @@
 				<?php include 'include/payment_method/gopay-qr.php'; ?>
 			</div>
 
+			<div class="payment-methods" id="indomaret-barcode-method">
+				<?php include 'include/payment_method/indomaret-checkout.php'; ?>
+			</div>
+
 
 
 		</div>
@@ -125,6 +129,15 @@
 		$(methods).hide();
 		$('#indomart-method').show();
 	});
+
+
+	$("#indomart-checkout").click(function () {
+		$(methods).hide();
+		$('#indomart-method').hide();
+		$('#indomaret-barcode-method').show();
+
+	});
+
 
 	$("#bank-bca").click(function () {
 		$(methods).hide();
