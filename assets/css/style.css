@@ -475,6 +475,28 @@ button.active-tab:hover {
 	cursor: pointer;
 }
 
+.navbar-collapse.float-right.collapse.show {
+	text-align: center;
+
+}
+
+
+button.navbar-toggler {
+	z-index: 3;
+	float: right;
+	margin-left: auto;
+	margin-right: 0px;
+}
+
+.navbar-brand {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	text-align: center;
+	margin: auto;
+}
+
 /* responsive */
 
 
