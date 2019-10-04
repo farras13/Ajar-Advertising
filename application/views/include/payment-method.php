@@ -8,7 +8,7 @@
 
 
 	<div id="payment-table" class="row">
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="cc-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="atm-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="30" width="50" src="https://image.flaticon.com/icons/svg/1899/1899722.svg" alt="atm" />
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="gopay-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="20" width="50"
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="klikbca-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="klikpay-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="30" width="50" src="https://www.hostnic.id/img/payment/logo_bcaklikpay.png"
@@ -90,7 +90,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="indomart-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
@@ -107,7 +107,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6 border">
+		<div class="col-sm-6 border" id="alfamart-methods-payment">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"

@@ -6,7 +6,7 @@
 
 	<hr />
 	<div class="align-content-center ">
-		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto">
+		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto" id="bank-bca">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto">
+		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto" id="bank-mandiri">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto">
+		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto" id="bank-bni">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto">
+		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto" id="bank-permata">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="auto" width="50"
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto">
+		<div class="list-group-item list-group-item-action py-0 w-75 mx-auto" id="bank-other">
 			<div class="row">
 				<div class="col-lg-2 py-2 my-auto text-center">
 					<img height="40" width="auto" src="https://image.flaticon.com/icons/svg/1899/1899722.svg"

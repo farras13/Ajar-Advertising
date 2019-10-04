@@ -64,7 +64,7 @@
 	<hr>
 
 	<div class="col-md-12 w-100 text-right mt-4">
-		<button class=" btn btn-abbys px-5 py-2 font-weight-bold">
+		<button id="checkout" class=" btn btn-abbys px-5 py-2 font-weight-bold">
 			CHECKOUT
 		</button>
 	</div>
