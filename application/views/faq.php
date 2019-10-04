@@ -23,8 +23,8 @@
     <body>
 
         <div data-include="header"> <?php include 'include/header.php'; ?> </div>
+        <div style="background-image:url('<?php echo base_url() ?>assets/img/banner-bg.jpg'); padding:11% 7%;"
 
-        <div style="background-image:url('https://evoluer.in/wp-content/themes/assets/images/header-bg.jpg'); padding: 9% 7%;"
             class="w-100 bg-dark text-white">
             <div class="container-fluid py-5">
                 <h1 class="font-weight-bolder">FAQ</h1>
@@ -107,7 +107,7 @@
         </div>
 
 
-        <div data-include="footer-2">  <?php include 'include/footer.php'; ?> </div>
+        <div data-include="footer-2">  <?php include 'include/footer-2.php'; ?> </div>
 
 
         <!-- lib -->
@@ -125,8 +125,7 @@
             for (let i = 0; i < cardheader.length; i++) {
                 $(cardheader[i]).click(function () {
                     $(collapse[i]).toggle("slow")
-                    $(angle[i]).toggleClass("fa-angle-up")
-
+                    $(angle[i+1]).toggleClass("fa-angle-up")
                 })
             }
         </script>
